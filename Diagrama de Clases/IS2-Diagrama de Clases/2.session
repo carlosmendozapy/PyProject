@@ -1,0 +1,17 @@
+window_sizes 1152 808 104 1042 699 35
+diagrams
+  active  classdiagram_ref 128133 // SistemaGestorProyectos
+    1042 652 30 0 0 0
+end
+show_stereotypes
+selected classview_ref 133893 // RootControllerClassView
+open
+  classview_ref 128133 // diagrama de clases
+  
+package_ref 128389 // sqlalchemy.orm
+  
+package_ref 129029 // tg
+  
+package_ref 128901 // py.com.is2.controllers
+end
+end

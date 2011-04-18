@@ -1,0 +1,104 @@
+format 76
+
+usecasecanvas 128005 usecase_ref 128005 // Administrar Proyecto
+  xyzwh 85 37 3005 64 32 label_xy 67 69
+end
+usecasecanvas 128133 usecase_ref 128133 // Crear Proyecto
+  xyzwh 251 93 3005 64 32 label_xy 247 125
+end
+usecasecanvas 128261 usecase_ref 128261 // Buscar Proyecto
+  xyzwh 254 34 3005 64 32 label_xy 246 66
+end
+usecasecanvas 128389 usecase_ref 128389 // Modificar Proyecto
+  xyzwh 252 152 3005 64 32 label_xy 239 184
+end
+usecasecanvas 128517 usecase_ref 128517 // Eliminar Proyecto
+  xyzwh 242 215 3005 64 32 label_xy 233 247
+end
+usecasecanvas 129157 usecase_ref 128645 // Administrar Fase
+  xyzwh 78 311 3005 64 32 label_xy 69 343
+end
+usecasecanvas 129285 usecase_ref 128773 // Buscar Fase
+  xyzwh 281 400 3005 64 32 label_xy 282 432
+end
+usecasecanvas 129797 usecase_ref 128901 // Crear Fase
+  xyzwh 276 459 3005 64 32 label_xy 281 491
+end
+usecasecanvas 129925 usecase_ref 129029 // Modificar Fase
+  xyzwh 274 518 3005 64 32 label_xy 271 550
+end
+usecasecanvas 130053 usecase_ref 129157 // Eliminar Fase
+  xyzwh 272 574 3005 64 32 label_xy 272 606
+end
+usecasecanvas 130181 usecase_ref 129285 // Administrar Tipo Item
+  xyzwh 71 636 3005 64 32 label_xy 53 668
+end
+usecasecanvas 130309 usecase_ref 129413 // Buscar Tipo Item
+  xyzwh 266 684 3005 64 32 label_xy 258 716
+end
+usecasecanvas 130693 usecase_ref 129797 // Crear Tipo Item
+  xyzwh 263 746 3005 64 32 label_xy 259 778
+end
+usecasecanvas 130821 usecase_ref 129669 // Modificar Tipo Item
+  xyzwh 266 804 3005 64 32 label_xy 254 836
+end
+usecasecanvas 130949 usecase_ref 129925 // Eliminar Tipo Item
+  xyzwh 268 863 3005 64 32 label_xy 260 895
+end
+usecasecanvas 131205 usecase_ref 130053 // Administrar Item
+  xyzwh 61 924 3005 64 32 label_xy 55 956
+end
+usecasecanvas 131333 usecase_ref 130181 // Buscar Item
+  xyzwh 265 971 3005 64 32 label_xy 268 1003
+end
+usecasecanvas 131461 usecase_ref 130309 // Crear Item
+  xyzwh 266 1026 3005 64 32 label_xy 273 1058
+end
+usecasecanvas 131589 usecase_ref 130437 // Modificar Item
+  xyzwh 268 1080 3005 64 32 label_xy 267 1112
+end
+usecasecanvas 132357 usecase_ref 130565 // Eliminar Item
+  xyzwh 265 1132 3005 64 32 label_xy 268 1164
+end
+line 128645 --->
+  from ref 128005 z 3006 label "include/use" xyz 173 36 3000 to ref 128261
+line 128773 --->
+  from ref 128005 z 3006 label "include/use" xyz 172 65 3000 to ref 128133
+line 128901 --->
+  from ref 128005 z 3006 label "include/use" xyz 173 95 3000 to ref 128389
+line 129029 --->
+  from ref 128005 z 3006 label "include/use" xyz 167 127 3000 to ref 128517
+line 129669 --->
+  from ref 129157 z 3006 label "include/use" xyz 183 355 3000 to ref 129285
+line 131845 --->
+  from ref 131205 z 3006 label "include/use" xyz 167 947 3000 to ref 131333
+line 131973 --->
+  from ref 131205 z 3006 label "include/use" xyz 168 975 3000 to ref 131461
+line 132101 --->
+  from ref 131205 z 3006 label "include/use" xyz 169 1003 3000 to ref 131589
+line 132485 --->
+  from ref 131205 z 3006 label "include/use" xyz 166 1029 3000 to ref 132357
+line 132613 --->
+  from ref 130181 z 3006 label "include/use" xyz 172 659 3000 to ref 130309
+line 132741 --->
+  from ref 130181 z 3006 label "include/use" xyz 172 692 3000 to ref 130693
+line 132869 --->
+  from ref 130181 z 3006 label "include/use" xyz 173 721 3000 to ref 130821
+line 132997 --->
+  from ref 130181 z 3006 label "include/use" xyz 173 750 3000 to ref 130949
+line 133125 --->
+  from ref 129157 z 3006 label "include/use" xyz 181 386 3000 to ref 129797
+line 133253 --->
+  from ref 129157 z 3006 label "include/use" xyz 180 415 3000 to ref 129925
+line 133381 --->
+  from ref 129157 z 3006 label "include/use" xyz 179 443 3000 to ref 130053
+simplerelationcanvas 133637 simplerelation_ref 128005
+  from ref 128005 z 3006 stereotype "<<extend>>" xyz 84 189 3000 to ref 129157
+end
+simplerelationcanvas 133765 simplerelation_ref 128133
+  from ref 129157 z 3006 stereotype "<<extend>>" xyz 77 488 3000 to ref 130181
+end
+simplerelationcanvas 133893 simplerelation_ref 128261
+  from ref 130181 z 3006 stereotype "<<extend>>" xyz 68 795 3000 to ref 131205
+end
+end

@@ -1,0 +1,2562 @@
+format 76
+"py.com.is2.model.entities" // py.com.is2::py.com.is2.model::py.com.is2.model.entities
+  revision 3
+  modified_by 2 "Carlos Mendoza"
+  // class settings
+  default_attribute_visibility private default_operation_visibility public
+  //class diagram settings
+  draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+  //use case diagram settings
+  package_name_in_tab default show_context default auto_label_position default draw_all_relations default class_drawing_mode default shadow default show_stereotype_properties default
+  //sequence diagram settings
+  show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+  //collaboration diagram settings
+  show_full_operations_definition default show_hierarchical_rank default write_horizontally default class_drawing_mode default drawing_language default package_name_in_tab default show_context default show_msg_context default draw_all_relations default shadow default show_stereotype_properties default
+  //object diagram settings
+   write_horizontally default package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default show_stereotype_properties default
+  //component diagram settings
+  package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default
+  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+  //deployment diagram settings
+  package_name_in_tab default show_context default write_horizontally default auto_label_position default draw_all_relations default shadow default
+  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+  //state diagram settings
+  package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations default shadow default
+  show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+  //activity diagram settings
+  package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
+  show_infonote default drawing_language default show_stereotype_properties default
+  
+  classview 128261 "ItemClassView"
+    //class diagram settings
+    draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+    //collaboration diagram settings
+    show_full_operations_definition default show_hierarchical_rank default write_horizontally default class_drawing_mode default drawing_language default package_name_in_tab default show_context default show_msg_context default draw_all_relations default shadow default show_stereotype_properties default
+    //object diagram settings
+     write_horizontally default package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default show_stereotype_properties default
+    //sequence diagram settings
+    show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+    //state diagram settings
+    package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations default shadow default
+    show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+    //class settings
+    //activity diagram settings
+    package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
+    show_infonote default drawing_language default show_stereotype_properties default
+    class 128645 "Item"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl "class ${name}${inherit}:
+${docstring}${members}
+"
+      idl_decl ""
+      explicit_switch_type ""
+      
+      attribute 128773 "idItem"
+	private explicit_type "long"
+	multiplicity "1"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+      end
+
+      classrelation 128261 // <dependency>
+	relation 128261 -_->
+	  a default
+	    python "${type}"
+	    classrelation_ref 128261 // <dependency>
+	  b parent class_ref 129285 // Mapper
+      end
+
+      attribute 135813 "nomItem"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+      end
+
+      classrelation 144645 // item (<directional aggregation>)
+	relation 144645 o-->
+	  a role_name "item" public
+	    python "${comment}${self}${name} = ${value}
+"
+	    classrelation_ref 144645 // item (<directional aggregation>)
+	  b parent class_ref 131845 // ItemManager
+      end
+
+      classrelation 144773 // <dependency>
+	relation 144773 -_->
+	  a default
+	    python "${type}"
+	    classrelation_ref 144773 // <dependency>
+	  b parent class_ref 131845 // ItemManager
+      end
+
+      classrelation 128130 // <composition>
+	relation_ref 128002 // <composition>
+      end
+
+      classrelation 128258 // <composition>
+	relation 128130 *---
+	  a role_name "" multiplicity "1..*" public
+	    python "${comment}${self}${name} = ${stereotype}()
+"
+	    classrelation_ref 128258 // <composition>
+	  b role_name "" multiplicity "1" public
+	    python "${comment}${self}${name} = ${type}()
+"
+	    classrelation_ref 128386 // <composition>
+      end
+    end
+  end
+
+  classview 128389 "ProyectoClassView"
+    //class diagram settings
+    draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+    //collaboration diagram settings
+    show_full_operations_definition default show_hierarchical_rank default write_horizontally default class_drawing_mode default drawing_language default package_name_in_tab default show_context default show_msg_context default draw_all_relations default shadow default show_stereotype_properties default
+    //object diagram settings
+     write_horizontally default package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default show_stereotype_properties default
+    //sequence diagram settings
+    show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+    //state diagram settings
+    package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations default shadow default
+    show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+    //class settings
+    //activity diagram settings
+    package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
+    show_infonote default drawing_language default show_stereotype_properties default
+    class 128773 "Proyecto"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl "class ${name}${inherit}:
+${docstring}${members}
+"
+      idl_decl ""
+      explicit_switch_type ""
+      
+      attribute 129029 "idProyecto"
+	private explicit_type "long"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+      end
+
+      classrelation 129541 // <dependency>
+	relation 129541 -_->
+	  a default
+	    python "${type}"
+	    classrelation_ref 129541 // <dependency>
+	  b parent class_ref 129285 // Mapper
+      end
+
+      attribute 137733 "nomProyecto"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+      end
+
+      attribute 137861 "desProyecto"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+      end
+
+      classrelation 145157 // <dependency>
+	relation 145157 -_->
+	  a default
+	    python "${type}"
+	    classrelation_ref 145157 // <dependency>
+	  b parent class_ref 131973 // ProyectoManager
+      end
+
+      classrelation 136322 // <composition>
+	relation_ref 132098 // <composition>
+      end
+
+      classrelation 137090 // <composition>
+	relation_ref 132482 // <composition>
+      end
+    end
+  end
+
+  classview 128517 "FaseClassView"
+    //class diagram settings
+    draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+    //collaboration diagram settings
+    show_full_operations_definition default show_hierarchical_rank default write_horizontally default class_drawing_mode default drawing_language default package_name_in_tab default show_context default show_msg_context default draw_all_relations default shadow default show_stereotype_properties default
+    //object diagram settings
+     write_horizontally default package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default show_stereotype_properties default
+    //sequence diagram settings
+    show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+    //state diagram settings
+    package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations default shadow default
+    show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+    //class settings
+    //activity diagram settings
+    package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
+    show_infonote default drawing_language default show_stereotype_properties default
+    class 128901 "Fase"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl "class ${name}${inherit}:
+${docstring}${members}
+"
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 129413 // <dependency>
+	relation 129413 -_->
+	  a default
+	    python "${type}"
+	    classrelation_ref 129413 // <dependency>
+	  b parent class_ref 129285 // Mapper
+      end
+
+      attribute 137477 "idFase"
+	private explicit_type "long"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+      end
+
+      attribute 137605 "idEstado"
+	private type class_ref 129541 // Estado
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+      end
+
+      classrelation 145029 // <dependency>
+	relation 145029 -_->
+	  a default
+	    python "${type}"
+	    classrelation_ref 145029 // <dependency>
+	  b parent class_ref 132101 // FaseManager
+      end
+
+      classrelation 133122 // <aggregation>
+	relation 130562 o---
+	  a role_name "" multiplicity "*" public
+	    python "${comment}${self}${name} = ${stereotype}()
+"
+	    classrelation_ref 133122 // <aggregation>
+	  b role_name "" multiplicity "1..*" public
+	    python "${comment}${self}${name} = ${stereotype}()
+"
+	    classrelation_ref 133250 // <aggregation>
+      end
+
+      classrelation 133506 // <aggregation>
+	relation_ref 130690 // <aggregation>
+      end
+
+      classrelation 133634 // <aggregation>
+	relation 130818 o---
+	  a role_name "" multiplicity "1" public
+	    python "${comment}${self}${name} = ${value}
+"
+	    classrelation_ref 133634 // <aggregation>
+	  b role_name "" multiplicity "1..*" public
+	    python "${comment}${self}${name} = ${stereotype}()
+"
+	    classrelation_ref 133762 // <aggregation>
+      end
+
+      classrelation 135938 // <aggregation>
+	relation 131970 o---
+	  a role_name "" multiplicity "*" public
+	    python "${comment}${self}${name} = ${stereotype}()
+"
+	    classrelation_ref 135938 // <aggregation>
+	  b role_name "" multiplicity "1" public
+	    python "${comment}${self}${name} = ${value}
+"
+	    classrelation_ref 136066 // <aggregation>
+      end
+
+      attribute 128002 "idProyecto"
+	private explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+      end
+
+      classrelation 136194 // <composition>
+	relation 132098 *---
+	  a role_name "" multiplicity "1" public
+	    python "${comment}${self}${name} = ${type}()
+"
+	    classrelation_ref 136194 // <composition>
+	  b role_name "" multiplicity "1..*" public
+	    python "${comment}${self}${name} = ${stereotype}()
+"
+	    classrelation_ref 136322 // <composition>
+      end
+    end
+  end
+
+  classview 128645 "TipoItemClassView"
+    //class diagram settings
+    draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+    //collaboration diagram settings
+    show_full_operations_definition default show_hierarchical_rank default write_horizontally default class_drawing_mode default drawing_language default package_name_in_tab default show_context default show_msg_context default draw_all_relations default shadow default show_stereotype_properties default
+    //object diagram settings
+     write_horizontally default package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default show_stereotype_properties default
+    //sequence diagram settings
+    show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+    //state diagram settings
+    package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations default shadow default
+    show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+    //class settings
+    //activity diagram settings
+    package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
+    show_infonote default drawing_language default show_stereotype_properties default
+    class 129029 "TipoItem"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl "class ${name}${inherit}:
+${docstring}${members}
+"
+      idl_decl ""
+      explicit_switch_type ""
+      
+      attribute 128901 "idTipoItem"
+	private explicit_type "long"
+	multiplicity "1"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+      end
+
+      classrelation 129157 // <dependency>
+	relation 129157 -_->
+	  a default
+	    python "${type}"
+	    classrelation_ref 129157 // <dependency>
+	  b parent class_ref 129285 // Mapper
+      end
+
+      attribute 139525 "idFase"
+	private type class_ref 128901 // Fase
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+      end
+
+      attribute 139653 "nomTipoItem"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+      end
+
+      classrelation 130434 // <composition>
+	relation_ref 129154 // <composition>
+      end
+
+      classrelation 130946 // <aggregation>
+	relation_ref 129410 // <aggregation>
+      end
+
+      classrelation 132994 // <composition>
+	relation_ref 130434 // <composition>
+      end
+
+      classrelation 133250 // <aggregation>
+	relation_ref 130562 // <aggregation>
+      end
+    end
+  end
+
+  classview 129029 "VersionItemClassView"
+    //class diagram settings
+    draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+    //collaboration diagram settings
+    show_full_operations_definition default show_hierarchical_rank default write_horizontally default class_drawing_mode default drawing_language default package_name_in_tab default show_context default show_msg_context default draw_all_relations default shadow default show_stereotype_properties default
+    //object diagram settings
+     write_horizontally default package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default show_stereotype_properties default
+    //sequence diagram settings
+    show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+    //state diagram settings
+    package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations default shadow default
+    show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+    //class settings
+    //activity diagram settings
+    package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
+    show_infonote default drawing_language default show_stereotype_properties default
+    class 129413 "VersionItem"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl "class ${name}${inherit}:
+${docstring}${members}
+"
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 128389 // <dependency>
+	relation 128389 -_->
+	  a package
+	    python "${type}"
+	    classrelation_ref 128389 // <dependency>
+	  b parent class_ref 129285 // Mapper
+      end
+
+      attribute 135557 "idVersionItem"
+	private explicit_type "long"
+	multiplicity "1"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+      end
+
+      attribute 135941 "nroVersionItem"
+	private explicit_type ""
+	init_value "long"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+      end
+
+      attribute 135685 "idItem"
+	private type class_ref 128645 // Item
+	multiplicity "1..*"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${stereotype}()
+"
+	idl_decl ""
+      end
+
+      attribute 136069 "idEstado"
+	private type class_ref 129541 // Estado
+	multiplicity "1..*"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${stereotype}()
+"
+	idl_decl ""
+      end
+
+      attribute 136197 "idTipoItem"
+	private type class_ref 129029 // TipoItem
+	multiplicity "1..*"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${stereotype}()
+"
+	idl_decl ""
+      end
+
+      attribute 136325 "observaciones"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+      end
+
+      attribute 136453 "fecha"
+	private explicit_type "date"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+      end
+
+      attribute 136581 "idUsuarioModifico"
+	private type class_ref 130309 // Usuario
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+      end
+
+      attribute 136709 "peso"
+	private explicit_type "integer"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+      end
+
+      classrelation 144517 // <dependency>
+	relation 144517 -_->
+	  stereotype "import"
+	  a package
+	    python "${type}"
+	    classrelation_ref 144517 // <dependency>
+	  b multiplicity "1..*" parent class_ref 128645 // Item
+      end
+
+      classrelation 144901 // <dependency>
+	relation 144901 -_->
+	  a default
+	    python "${type}"
+	    classrelation_ref 144901 // <dependency>
+	  b parent class_ref 132357 // VersionItemManager
+      end
+
+      classrelation 128002 // <composition>
+	relation 128002 *---
+	  a role_name "" public
+	    python "${comment}${self}${name} = ${type}()
+"
+	    classrelation_ref 128002 // <composition>
+	  b role_name "" public
+	    python "${comment}${self}${name} = ${type}()
+"
+	    classrelation_ref 128130 // <composition>
+      end
+
+      classrelation 128386 // <composition>
+	relation_ref 128130 // <composition>
+      end
+
+      classrelation 128642 // <composition>
+	relation_ref 128258 // <composition>
+      end
+
+      classrelation 128770 // <composition>
+	relation 128386 *---
+	  a role_name "" multiplicity "*" public
+	    python "${comment}${self}${name} = ${stereotype}()
+"
+	    classrelation_ref 128770 // <composition>
+	  b role_name "" multiplicity "1" public
+	    python "${comment}${self}${name} = ${type}()
+"
+	    classrelation_ref 128898 // <composition>
+      end
+
+      classrelation 129154 // <composition>
+	relation_ref 128514 // <composition>
+      end
+
+      classrelation 129282 // <composition>
+	relation 128642 *---
+	  a role_name "" multiplicity "1..*" public
+	    python "${comment}${self}${name} = ${stereotype}()
+"
+	    classrelation_ref 129282 // <composition>
+	  b role_name "" multiplicity "1" public
+	    python "${comment}${self}${name} = ${type}()
+"
+	    classrelation_ref 129410 // <composition>
+      end
+
+      classrelation 129666 // <composition>
+	relation_ref 128770 // <composition>
+      end
+
+      classrelation 129794 // <composition>
+	relation 128898 *---
+	  a role_name "" multiplicity "1" public
+	    python "${comment}${self}${name} = ${type}()
+"
+	    classrelation_ref 129794 // <composition>
+	  b role_name "" multiplicity "1" public
+	    python "${comment}${self}${name} = ${type}()
+"
+	    classrelation_ref 129922 // <composition>
+      end
+
+      classrelation 130050 // <composition>
+	relation 129026 *---
+	  a role_name "" multiplicity "1" public
+	    python "${comment}${self}${name} = ${type}()
+"
+	    classrelation_ref 130050 // <composition>
+	  b role_name "" multiplicity "1..*" public
+	    python "${comment}${self}${name} = ${stereotype}()
+"
+	    classrelation_ref 130178 // <composition>
+      end
+
+      classrelation 130306 // <composition>
+	relation 129154 *---
+	  a role_name "" public
+	    python "${comment}${self}${name} = ${type}()
+"
+	    classrelation_ref 130306 // <composition>
+	  b role_name "" public
+	    python "${comment}${self}${name} = ${type}()
+"
+	    classrelation_ref 130434 // <composition>
+      end
+
+      classrelation 130562 // <aggregation>
+	relation 129282 o---
+	  a role_name "" multiplicity "1" public
+	    python "${comment}${self}${name} = ${value}
+"
+	    classrelation_ref 130562 // <aggregation>
+	  b role_name "" multiplicity "1..*" public
+	    python "${comment}${self}${name} = ${stereotype}()
+"
+	    classrelation_ref 130690 // <aggregation>
+      end
+
+      classrelation 130818 // <aggregation>
+	relation 129410 o---
+	  a role_name "" multiplicity "1" public
+	    python "${comment}${self}${name} = ${value}
+"
+	    classrelation_ref 130818 // <aggregation>
+	  b role_name "" multiplicity "1..*" public
+	    python "${comment}${self}${name} = ${stereotype}()
+"
+	    classrelation_ref 130946 // <aggregation>
+      end
+
+      classrelation 131074 // <aggregation>
+	relation 129538 o---
+	  a role_name "" multiplicity "1..*" public
+	    python "${comment}${self}${name} = ${stereotype}()
+"
+	    classrelation_ref 131074 // <aggregation>
+	  b role_name "" multiplicity "*" public
+	    python "${comment}${self}${name} = ${stereotype}()
+"
+	    classrelation_ref 131202 // <aggregation>
+      end
+
+      classrelation 131714 // <composition>
+	relation_ref 129794 // <composition>
+      end
+    end
+  end
+
+  classview 129157 "EstadoClassView"
+    //class diagram settings
+    draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+    //collaboration diagram settings
+    show_full_operations_definition default show_hierarchical_rank default write_horizontally default class_drawing_mode default drawing_language default package_name_in_tab default show_context default show_msg_context default draw_all_relations default shadow default show_stereotype_properties default
+    //object diagram settings
+     write_horizontally default package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default show_stereotype_properties default
+    //sequence diagram settings
+    show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+    //state diagram settings
+    package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations default shadow default
+    show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+    //class settings
+    //activity diagram settings
+    package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
+    show_infonote default drawing_language default show_stereotype_properties default
+    class 129541 "Estado"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl "class ${name}${inherit}:
+${docstring}${members}
+"
+      idl_decl ""
+      explicit_switch_type ""
+      
+      associated_diagram classdiagram_ref 128133 // SistemaGestorProyectos
+      classrelation 128645 // <dependency>
+	relation 128645 -_->
+	  a default
+	    python "${type}"
+	    classrelation_ref 128645 // <dependency>
+	  b parent class_ref 129285 // Mapper
+      end
+
+      attribute 139013 "idEstado"
+	private explicit_type "long"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+      end
+
+      attribute 137349 "nomEstado"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+      end
+
+      classrelation 130178 // <composition>
+	relation_ref 129026 // <composition>
+      end
+
+      classrelation 130690 // <aggregation>
+	relation_ref 129282 // <aggregation>
+      end
+
+      classrelation 131842 // <aggregation>
+	relation 129922 o---
+	  a role_name "" public
+	    python "${comment}${self}${name} = ${value}
+"
+	    classrelation_ref 131842 // <aggregation>
+	  b role_name "" public
+	    python "${comment}${self}${name} = ${value}
+"
+	    classrelation_ref 131970 // <aggregation>
+      end
+
+      classrelation 132226 // <aggregation>
+	relation_ref 130050 // <aggregation>
+      end
+
+      classrelation 133378 // <aggregation>
+	relation 130690 o---
+	  a role_name "" public
+	    python "${comment}${self}${name} = ${value}
+"
+	    classrelation_ref 133378 // <aggregation>
+	  b role_name "" public
+	    python "${comment}${self}${name} = ${value}
+"
+	    classrelation_ref 133506 // <aggregation>
+      end
+
+      classrelation 133762 // <aggregation>
+	relation_ref 130818 // <aggregation>
+      end
+    end
+  end
+
+  classview 129285 "AtributoClassView"
+    //class diagram settings
+    draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+    //collaboration diagram settings
+    show_full_operations_definition default show_hierarchical_rank default write_horizontally default class_drawing_mode default drawing_language default package_name_in_tab default show_context default show_msg_context default draw_all_relations default shadow default show_stereotype_properties default
+    //object diagram settings
+     write_horizontally default package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default show_stereotype_properties default
+    //sequence diagram settings
+    show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+    //state diagram settings
+    package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations default shadow default
+    show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+    //class settings
+    //activity diagram settings
+    package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
+    show_infonote default drawing_language default show_stereotype_properties default
+    class 129669 "Atributo"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl "class ${name}${inherit}:
+${docstring}${members}
+"
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 128517 // <dependency>
+	relation 128517 -_->
+	  a default
+	    python "${type}"
+	    classrelation_ref 128517 // <dependency>
+	  b parent class_ref 129285 // Mapper
+      end
+
+      attribute 136837 "idAtributo"
+	private explicit_type "long"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+      end
+
+      attribute 136965 "idTipoDato"
+	private type class_ref 130053 // TipoDatoAtributo
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+      end
+
+      attribute 137093 "idTipoItem"
+	private type class_ref 129029 // TipoItem
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+      end
+
+      classrelation 131458 // <composition>
+	relation_ref 129666 // <composition>
+      end
+
+      classrelation 132482 // <composition>
+	relation_ref 130178 // <composition>
+      end
+
+      classrelation 132610 // <composition>
+	relation 130306 *---
+	  a role_name "" multiplicity "1" public
+	    python "${comment}${self}${name} = ${type}()
+"
+	    classrelation_ref 132610 // <composition>
+	  b role_name "" multiplicity "*" public
+	    python "${comment}${self}${name} = ${stereotype}()
+"
+	    classrelation_ref 132738 // <composition>
+      end
+
+      classrelation 132866 // <composition>
+	relation 130434 *---
+	  a role_name "" multiplicity "1" public
+	    python "${comment}${self}${name} = ${type}()
+"
+	    classrelation_ref 132866 // <composition>
+	  b role_name "" multiplicity "*" public
+	    python "${comment}${self}${name} = ${stereotype}()
+"
+	    classrelation_ref 132994 // <composition>
+      end
+    end
+  end
+
+  classview 129413 "AtributoItemClassView"
+    //class diagram settings
+    draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+    //collaboration diagram settings
+    show_full_operations_definition default show_hierarchical_rank default write_horizontally default class_drawing_mode default drawing_language default package_name_in_tab default show_context default show_msg_context default draw_all_relations default shadow default show_stereotype_properties default
+    //object diagram settings
+     write_horizontally default package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default show_stereotype_properties default
+    //sequence diagram settings
+    show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+    //state diagram settings
+    package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations default shadow default
+    show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+    //class settings
+    //activity diagram settings
+    package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
+    show_infonote default drawing_language default show_stereotype_properties default
+    class 129797 "AtributoItem"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl "class ${name}${inherit}:
+${docstring}${members}
+"
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 128901 // <dependency>
+	relation 128901 -_->
+	  a default
+	    python "${type}"
+	    classrelation_ref 128901 // <dependency>
+	  b parent class_ref 129285 // Mapper
+      end
+
+      attribute 139141 "idAtributo"
+	private type class_ref 129669 // Atributo
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+      end
+
+      attribute 139269 "idVersionItem"
+	private type class_ref 129413 // VersionItem
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+      end
+
+      attribute 139397 "valAtributo"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+      end
+
+      classrelation 129026 // <composition>
+	relation 128514 *---
+	  a role_name "" public
+	    python "${comment}${self}${name} = ${type}()
+"
+	    classrelation_ref 129026 // <composition>
+	  b role_name "" public
+	    python "${comment}${self}${name} = ${type}()
+"
+	    classrelation_ref 129154 // <composition>
+      end
+
+      classrelation 129410 // <composition>
+	relation_ref 128642 // <composition>
+      end
+
+      classrelation 131330 // <composition>
+	relation 129666 *---
+	  a role_name "" multiplicity "1" public
+	    python "${comment}${self}${name} = ${type}()
+"
+	    classrelation_ref 131330 // <composition>
+	  b role_name "" multiplicity "*" public
+	    python "${comment}${self}${name} = ${stereotype}()
+"
+	    classrelation_ref 131458 // <composition>
+      end
+    end
+  end
+
+  classview 129541 "AtributoArchivoClassView"
+    //class diagram settings
+    draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+    //collaboration diagram settings
+    show_full_operations_definition default show_hierarchical_rank default write_horizontally default class_drawing_mode default drawing_language default package_name_in_tab default show_context default show_msg_context default draw_all_relations default shadow default show_stereotype_properties default
+    //object diagram settings
+     write_horizontally default package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default show_stereotype_properties default
+    //sequence diagram settings
+    show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+    //state diagram settings
+    package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations default shadow default
+    show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+    //class settings
+    //activity diagram settings
+    package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
+    show_infonote default drawing_language default show_stereotype_properties default
+    class 129925 "AtributoArchivo"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl "class ${name}${inherit}:
+${docstring}${members}
+"
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 129029 // <dependency>
+	relation 129029 -_->
+	  a default
+	    python "${type}"
+	    classrelation_ref 129029 // <dependency>
+	  b parent class_ref 129285 // Mapper
+      end
+
+      attribute 139781 "idAtributo"
+	private type class_ref 129669 // Atributo
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+      end
+
+      attribute 139909 "idVersionItem"
+	private type class_ref 129413 // VersionItem
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+      end
+
+      attribute 140037 "archivo"
+	private explicit_type "file"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+      end
+
+      classrelation 129538 // <composition>
+	relation 128770 *---
+	  a role_name "" public
+	    python "${comment}${self}${name} = ${type}()
+"
+	    classrelation_ref 129538 // <composition>
+	  b role_name "" public
+	    python "${comment}${self}${name} = ${type}()
+"
+	    classrelation_ref 129666 // <composition>
+      end
+
+      classrelation 129922 // <composition>
+	relation_ref 128898 // <composition>
+      end
+
+      classrelation 132354 // <composition>
+	relation 130178 *---
+	  a role_name "" multiplicity "1" public
+	    python "${comment}${self}${name} = ${type}()
+"
+	    classrelation_ref 132354 // <composition>
+	  b role_name "" multiplicity "*" public
+	    python "${comment}${self}${name} = ${stereotype}()
+"
+	    classrelation_ref 132482 // <composition>
+      end
+    end
+  end
+
+  classview 129669 "TipoDatoAtributoClassView"
+    //class diagram settings
+    draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+    //collaboration diagram settings
+    show_full_operations_definition default show_hierarchical_rank default write_horizontally default class_drawing_mode default drawing_language default package_name_in_tab default show_context default show_msg_context default draw_all_relations default shadow default show_stereotype_properties default
+    //object diagram settings
+     write_horizontally default package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default show_stereotype_properties default
+    //sequence diagram settings
+    show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+    //state diagram settings
+    package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations default shadow default
+    show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+    //class settings
+    //activity diagram settings
+    package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
+    show_infonote default drawing_language default show_stereotype_properties default
+    class 130053 "TipoDatoAtributo"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl "class ${name}${inherit}:
+${docstring}${members}
+"
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 129285 // <dependency>
+	relation 129285 -_->
+	  a default
+	    python "${type}"
+	    classrelation_ref 129285 // <dependency>
+	  b parent class_ref 129285 // Mapper
+      end
+
+      attribute 142085 "idTipoDato"
+	private explicit_type "long"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+      end
+
+      attribute 142213 "nomTipoDato"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+      end
+
+      classrelation 132738 // <composition>
+	relation_ref 130306 // <composition>
+      end
+    end
+  end
+
+  classview 129797 "RelacionItemClassView"
+    //class diagram settings
+    draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+    //collaboration diagram settings
+    show_full_operations_definition default show_hierarchical_rank default write_horizontally default class_drawing_mode default drawing_language default package_name_in_tab default show_context default show_msg_context default draw_all_relations default shadow default show_stereotype_properties default
+    //object diagram settings
+     write_horizontally default package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default show_stereotype_properties default
+    //sequence diagram settings
+    show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+    //state diagram settings
+    package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations default shadow default
+    show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+    //class settings
+    //activity diagram settings
+    package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
+    show_infonote default drawing_language default show_stereotype_properties default
+    class 130181 "RelacionItem"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl "class ${name}${inherit}:
+${docstring}${members}
+"
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 128773 // <dependency>
+	relation 128773 -_->
+	  a default
+	    python "${type}"
+	    classrelation_ref 128773 // <dependency>
+	  b parent class_ref 129285 // Mapper
+      end
+
+      attribute 140165 "idRelacion"
+	private explicit_type "long"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+      end
+
+      attribute 140293 "idVersionItemAntecesor"
+	private type class_ref 129413 // VersionItem
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+      end
+
+      attribute 140421 "idVersionItem"
+	private type class_ref 129413 // VersionItem
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+      end
+
+      classrelation 128514 // <composition>
+	relation 128258 *---
+	  a role_name "" public
+	    python "${comment}${self}${name} = ${type}()
+"
+	    classrelation_ref 128514 // <composition>
+	  b role_name "" public
+	    python "${comment}${self}${name} = ${type}()
+"
+	    classrelation_ref 128642 // <composition>
+      end
+
+      classrelation 128898 // <composition>
+	relation_ref 128386 // <composition>
+      end
+    end
+  end
+
+  classview 129925 "UsuarioClassView"
+    //class diagram settings
+    draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+    //collaboration diagram settings
+    show_full_operations_definition default show_hierarchical_rank default write_horizontally default class_drawing_mode default drawing_language default package_name_in_tab default show_context default show_msg_context default draw_all_relations default shadow default show_stereotype_properties default
+    //object diagram settings
+     write_horizontally default package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default show_stereotype_properties default
+    //sequence diagram settings
+    show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+    //state diagram settings
+    package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations default shadow default
+    show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+    //class settings
+    //activity diagram settings
+    package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
+    show_infonote default drawing_language default show_stereotype_properties default
+    class 130309 "Usuario"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl "class ${name}${inherit}:
+${docstring}${members}
+"
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 129669 // <dependency>
+	relation 129669 -_->
+	  a default
+	    python "${type}"
+	    classrelation_ref 129669 // <dependency>
+	  b parent class_ref 129285 // Mapper
+      end
+
+      attribute 137989 "idUsuario"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+      end
+
+      attribute 138245 "loginName"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+      end
+
+      attribute 138373 "password"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+      end
+
+      attribute 138117 "nomUsuario"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+      end
+
+      classrelation 131202 // <aggregation>
+	relation_ref 129538 // <aggregation>
+      end
+
+      classrelation 135810 // <aggregation>
+	relation_ref 131842 // <aggregation>
+      end
+
+      classrelation 136450 // <composition>
+	relation 132226 *---
+	  a role_name "" public
+	    python "${comment}${self}${name} = ${type}()
+"
+	    classrelation_ref 136450 // <composition>
+	  b role_name "" public
+	    python "${comment}${self}${name} = ${type}()
+"
+	    classrelation_ref 136578 // <composition>
+      end
+
+      classrelation 136834 // <composition>
+	relation_ref 132354 // <composition>
+      end
+
+      classrelation 137858 // <composition>
+	relation_ref 132866 // <composition>
+      end
+    end
+  end
+
+  classview 130053 "RolClassView"
+    //class diagram settings
+    draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+    //collaboration diagram settings
+    show_full_operations_definition default show_hierarchical_rank default write_horizontally default class_drawing_mode default drawing_language default package_name_in_tab default show_context default show_msg_context default draw_all_relations default shadow default show_stereotype_properties default
+    //object diagram settings
+     write_horizontally default package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default show_stereotype_properties default
+    //sequence diagram settings
+    show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+    //state diagram settings
+    package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations default shadow default
+    show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+    //class settings
+    //activity diagram settings
+    package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
+    show_infonote default drawing_language default show_stereotype_properties default
+    class 130437 "Rol"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl "class ${name}${inherit}:
+${docstring}${members}
+"
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 129797 // <dependency>
+	relation 129797 -_->
+	  a default
+	    python "${type}"
+	    classrelation_ref 129797 // <dependency>
+	  b parent class_ref 129285 // Mapper
+      end
+
+      attribute 138757 "idRol"
+	private explicit_type "long"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+      end
+
+      attribute 138885 "idTipoRol"
+	private type class_ref 130565 // TipoRol
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+      end
+
+      classrelation 138114 // <aggregation>
+	relation_ref 132994 // <aggregation>
+      end
+
+      classrelation 138242 // <aggregation>
+	relation 133122 o---
+	  a role_name "" multiplicity "1..*" public
+	    python "${comment}${self}${name} = ${stereotype}()
+"
+	    classrelation_ref 138242 // <aggregation>
+	  b role_name "" multiplicity "*" public
+	    python "${comment}${self}${name} = ${stereotype}()
+"
+	    classrelation_ref 138370 // <aggregation>
+      end
+
+      classrelation 138498 // <aggregation>
+	relation 133250 o---
+	  a role_name "" public
+	    python "${comment}${self}${name} = ${value}
+"
+	    classrelation_ref 138498 // <aggregation>
+	  b role_name "" public
+	    python "${comment}${self}${name} = ${value}
+"
+	    classrelation_ref 138626 // <aggregation>
+      end
+
+      classrelation 138882 // <aggregation>
+	relation_ref 133378 // <aggregation>
+      end
+
+      classrelation 139138 // <aggregation>
+	relation_ref 133506 // <aggregation>
+      end
+
+      classrelation 139266 // <aggregation>
+	relation 133634 o---
+	  a role_name "" multiplicity "1..*" public
+	    python "${comment}${self}${name} = ${stereotype}()
+"
+	    classrelation_ref 139266 // <aggregation>
+	  b role_name "" multiplicity "1" public
+	    python "${comment}${self}${name} = ${value}
+"
+	    classrelation_ref 139394 // <aggregation>
+      end
+    end
+  end
+
+  classview 130181 "TipoRolClassView"
+    //class diagram settings
+    draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+    //collaboration diagram settings
+    show_full_operations_definition default show_hierarchical_rank default write_horizontally default class_drawing_mode default drawing_language default package_name_in_tab default show_context default show_msg_context default draw_all_relations default shadow default show_stereotype_properties default
+    //object diagram settings
+     write_horizontally default package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default show_stereotype_properties default
+    //sequence diagram settings
+    show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+    //state diagram settings
+    package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations default shadow default
+    show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+    //class settings
+    //activity diagram settings
+    package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
+    show_infonote default drawing_language default show_stereotype_properties default
+    class 130565 "TipoRol"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl "class ${name}${inherit}:
+${docstring}${members}
+"
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 129925 // <dependency>
+	relation 129925 -_->
+	  a default
+	    python "${type}"
+	    classrelation_ref 129925 // <dependency>
+	  b parent class_ref 129285 // Mapper
+      end
+
+      attribute 138501 "idTipoRol"
+	private explicit_type "long"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+      end
+
+      attribute 138629 "nomTipoRol"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+      end
+
+      classrelation 138370 // <aggregation>
+	relation_ref 133122 // <aggregation>
+      end
+    end
+  end
+
+  classview 130309 "NroLineaBaseClassView"
+    //class diagram settings
+    draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+    //collaboration diagram settings
+    show_full_operations_definition default show_hierarchical_rank default write_horizontally default class_drawing_mode default drawing_language default package_name_in_tab default show_context default show_msg_context default draw_all_relations default shadow default show_stereotype_properties default
+    //object diagram settings
+     write_horizontally default package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default show_stereotype_properties default
+    //sequence diagram settings
+    show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+    //state diagram settings
+    package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations default shadow default
+    show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+    //class settings
+    //activity diagram settings
+    package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
+    show_infonote default drawing_language default show_stereotype_properties default
+    class 130693 "NroLineaBase"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl "class ${name}${inherit}:
+${docstring}${members}
+"
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 130053 // <dependency>
+	relation 130053 -_->
+	  a default
+	    python "${type}"
+	    classrelation_ref 130053 // <dependency>
+	  b parent class_ref 129285 // Mapper
+      end
+
+      attribute 140549 "idNroLineaBase"
+	private explicit_type "long"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+      end
+
+      attribute 140805 "idLineaBase"
+	private type class_ref 130821 // LineaBase
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+      end
+
+      attribute 140677 "nroLineaBase"
+	private explicit_type "long"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+      end
+
+      attribute 140933 "idEstado"
+	private type class_ref 129541 // Estado
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+      end
+
+      attribute 141061 "idUsuarioAprobo"
+	private type class_ref 130309 // Usuario
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+      end
+
+      classrelation 131970 // <aggregation>
+	relation_ref 129922 // <aggregation>
+      end
+
+      classrelation 132098 // <aggregation>
+	relation 130050 o---
+	  a role_name "" multiplicity "1" public
+	    python "${comment}${self}${name} = ${value}
+"
+	    classrelation_ref 132098 // <aggregation>
+	  b role_name "" multiplicity "*" public
+	    python "${comment}${self}${name} = ${stereotype}()
+"
+	    classrelation_ref 132226 // <aggregation>
+      end
+
+      classrelation 133890 // <composition>
+	relation 130946 *---
+	  a role_name "" public
+	    python "${comment}${self}${name} = ${type}()
+"
+	    classrelation_ref 133890 // <composition>
+	  b role_name "" public
+	    python "${comment}${self}${name} = ${type}()
+"
+	    classrelation_ref 134018 // <composition>
+      end
+
+      classrelation 134274 // <composition>
+	relation_ref 131074 // <composition>
+      end
+
+      classrelation 134530 // <aggregation>
+	relation_ref 131202 // <aggregation>
+      end
+
+      classrelation 134658 // <aggregation>
+	relation 131330 o---
+	  a role_name "" public
+	    python "${comment}${self}${name} = ${value}
+"
+	    classrelation_ref 134658 // <aggregation>
+	  b role_name "" public
+	    python "${comment}${self}${name} = ${value}
+"
+	    classrelation_ref 134786 // <aggregation>
+      end
+
+      classrelation 135042 // <aggregation>
+	relation_ref 131458 // <aggregation>
+      end
+
+      classrelation 135298 // <aggregation>
+	relation_ref 131586 // <aggregation>
+      end
+
+      classrelation 135426 // <aggregation>
+	relation 131714 o---
+	  a role_name "" multiplicity "1..*" public
+	    python "${comment}${self}${name} = ${stereotype}()
+"
+	    classrelation_ref 135426 // <aggregation>
+	  b role_name "" multiplicity "1" public
+	    python "${comment}${self}${name} = ${value}
+"
+	    classrelation_ref 135554 // <aggregation>
+      end
+
+      classrelation 135682 // <aggregation>
+	relation 131842 o---
+	  a role_name "" multiplicity "1" public
+	    python "${comment}${self}${name} = ${value}
+"
+	    classrelation_ref 135682 // <aggregation>
+	  b role_name "" multiplicity "*" public
+	    python "${comment}${self}${name} = ${stereotype}()
+"
+	    classrelation_ref 135810 // <aggregation>
+      end
+    end
+  end
+
+  classview 130437 "LineaBase"
+    //class diagram settings
+    draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+    //collaboration diagram settings
+    show_full_operations_definition default show_hierarchical_rank default write_horizontally default class_drawing_mode default drawing_language default package_name_in_tab default show_context default show_msg_context default draw_all_relations default shadow default show_stereotype_properties default
+    //object diagram settings
+     write_horizontally default package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default show_stereotype_properties default
+    //sequence diagram settings
+    show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+    //state diagram settings
+    package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations default shadow default
+    show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+    //class settings
+    //activity diagram settings
+    package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
+    show_infonote default drawing_language default show_stereotype_properties default
+    class 130821 "LineaBase"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl "class ${name}${inherit}:
+${docstring}${members}
+"
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 130181 // <dependency>
+	relation 130181 -_->
+	  a default
+	    python "${type}"
+	    classrelation_ref 130181 // <dependency>
+	  b parent class_ref 129285 // Mapper
+      end
+
+      attribute 141445 "idLineaBase"
+	private explicit_type "long"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+      end
+
+      attribute 141573 "idPermiso"
+	private type class_ref 135941 // Pemisos
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+      end
+
+      attribute 141701 "idFase"
+	private type class_ref 128901 // Fase
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+      end
+
+      attribute 141829 "nomLineaBase"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+      end
+
+      attribute 141957 "descripcion"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+      end
+
+      classrelation 134018 // <composition>
+	relation_ref 130946 // <composition>
+      end
+
+      classrelation 134146 // <composition>
+	relation 131074 *---
+	  a role_name "" multiplicity "1..*" public
+	    python "${comment}${self}${name} = ${stereotype}()
+"
+	    classrelation_ref 134146 // <composition>
+	  b role_name "" multiplicity "1" public
+	    python "${comment}${self}${name} = ${type}()
+"
+	    classrelation_ref 134274 // <composition>
+      end
+
+      classrelation 136066 // <aggregation>
+	relation_ref 131970 // <aggregation>
+      end
+    end
+  end
+
+  classview 130565 "ItemLineaBase"
+    //class diagram settings
+    draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+    //collaboration diagram settings
+    show_full_operations_definition default show_hierarchical_rank default write_horizontally default class_drawing_mode default drawing_language default package_name_in_tab default show_context default show_msg_context default draw_all_relations default shadow default show_stereotype_properties default
+    //object diagram settings
+     write_horizontally default package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default show_stereotype_properties default
+    //sequence diagram settings
+    show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+    //state diagram settings
+    package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations default shadow default
+    show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+    //class settings
+    //activity diagram settings
+    package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
+    show_infonote default drawing_language default show_stereotype_properties default
+    class 130949 "ItemLineaBase"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl "class ${name}${inherit}:
+${docstring}${members}
+"
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 130309 // <dependency>
+	relation 130309 -_->
+	  a default
+	    python "${type}"
+	    classrelation_ref 130309 // <dependency>
+	  b parent class_ref 129285 // Mapper
+      end
+
+      attribute 141189 "idNroLineaBase"
+	private type class_ref 130693 // NroLineaBase
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+      end
+
+      attribute 141317 "idVersionItem"
+	private type class_ref 129413 // VersionItem
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+      end
+
+      classrelation 131586 // <composition>
+	relation 129794 *---
+	  a role_name "" multiplicity "1" public
+	    python "${comment}${self}${name} = ${type}()
+"
+	    classrelation_ref 131586 // <composition>
+	  b role_name "" multiplicity "1..*" public
+	    python "${comment}${self}${name} = ${stereotype}()
+"
+	    classrelation_ref 131714 // <composition>
+      end
+
+      classrelation 134402 // <aggregation>
+	relation 131202 o---
+	  a role_name "" public
+	    python "${comment}${self}${name} = ${value}
+"
+	    classrelation_ref 134402 // <aggregation>
+	  b role_name "" public
+	    python "${comment}${self}${name} = ${value}
+"
+	    classrelation_ref 134530 // <aggregation>
+      end
+
+      classrelation 134786 // <aggregation>
+	relation_ref 131330 // <aggregation>
+      end
+
+      classrelation 134914 // <aggregation>
+	relation 131458 o---
+	  a role_name "" public
+	    python "${comment}${self}${name} = ${value}
+"
+	    classrelation_ref 134914 // <aggregation>
+	  b role_name "" public
+	    python "${comment}${self}${name} = ${value}
+"
+	    classrelation_ref 135042 // <aggregation>
+      end
+
+      classrelation 135170 // <aggregation>
+	relation 131586 o---
+	  a role_name "" public
+	    python "${comment}${self}${name} = ${value}
+"
+	    classrelation_ref 135170 // <aggregation>
+	  b role_name "" public
+	    python "${comment}${self}${name} = ${value}
+"
+	    classrelation_ref 135298 // <aggregation>
+      end
+
+      classrelation 135554 // <aggregation>
+	relation_ref 131714 // <aggregation>
+      end
+    end
+  end
+
+  classview 134789 "UsuarioProyectoClassView"
+    //class diagram settings
+    draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+    //collaboration diagram settings
+    show_full_operations_definition default show_hierarchical_rank default write_horizontally default class_drawing_mode default drawing_language default package_name_in_tab default show_context default show_msg_context default draw_all_relations default shadow default show_stereotype_properties default
+    //object diagram settings
+     write_horizontally default package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default show_stereotype_properties default
+    //sequence diagram settings
+    show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+    //state diagram settings
+    package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations default shadow default
+    show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+    //class settings
+    //activity diagram settings
+    package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
+    show_infonote default drawing_language default show_stereotype_properties default
+    class 135173 "UsuarioProyecto"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl "class ${name}${inherit}:
+${docstring}${members}
+"
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 141317 // <dependency>
+	relation 141317 -_->
+	  a default
+	    python "${type}"
+	    classrelation_ref 141317 // <dependency>
+	  b parent class_ref 129285 // Mapper
+      end
+
+      attribute 143749 "idUsuario"
+	private type class_ref 130309 // Usuario
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+      end
+
+      attribute 143877 "idProyecto"
+	private type class_ref 128773 // Proyecto
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+      end
+
+      classrelation 136578 // <composition>
+	relation_ref 132226 // <composition>
+      end
+
+      classrelation 136706 // <composition>
+	relation 132354 *---
+	  a role_name "" multiplicity "*" public
+	    python "${comment}${self}${name} = ${stereotype}()
+"
+	    classrelation_ref 136706 // <composition>
+	  b role_name "" multiplicity "1..*" public
+	    python "${comment}${self}${name} = ${stereotype}()
+"
+	    classrelation_ref 136834 // <composition>
+      end
+
+      classrelation 136962 // <composition>
+	relation 132482 *---
+	  a role_name "" multiplicity "1..*" public
+	    python "${comment}${self}${name} = ${stereotype}()
+"
+	    classrelation_ref 136962 // <composition>
+	  b role_name "" multiplicity "*" public
+	    python "${comment}${self}${name} = ${stereotype}()
+"
+	    classrelation_ref 137090 // <composition>
+      end
+
+      classrelation 137218 // <composition>
+	relation 132610 *---
+	  a role_name "" public
+	    python "${comment}${self}${name} = ${type}()
+"
+	    classrelation_ref 137218 // <composition>
+	  b role_name "" public
+	    python "${comment}${self}${name} = ${type}()
+"
+	    classrelation_ref 137346 // <composition>
+      end
+
+      classrelation 137602 // <composition>
+	relation_ref 132738 // <composition>
+      end
+    end
+  end
+
+  classview 134917 "UsuarioRolSistemaClassView"
+    //class diagram settings
+    draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+    //collaboration diagram settings
+    show_full_operations_definition default show_hierarchical_rank default write_horizontally default class_drawing_mode default drawing_language default package_name_in_tab default show_context default show_msg_context default draw_all_relations default shadow default show_stereotype_properties default
+    //object diagram settings
+     write_horizontally default package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default show_stereotype_properties default
+    //sequence diagram settings
+    show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+    //state diagram settings
+    package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations default shadow default
+    show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+    //class settings
+    //activity diagram settings
+    package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
+    show_infonote default drawing_language default show_stereotype_properties default
+    class 135301 "UsuarioRolSistema"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl "class ${name}${inherit}:
+${docstring}${members}
+"
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 141701 // <dependency>
+	relation 141701 -_->
+	  a default
+	    python "${type}"
+	    classrelation_ref 141701 // <dependency>
+	  b parent class_ref 129285 // Mapper
+      end
+
+      attribute 144005 "idUsuario"
+	private type class_ref 130309 // Usuario
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+      end
+
+      attribute 144133 "idRol"
+	private type class_ref 130437 // Rol
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+      end
+
+      classrelation 137730 // <composition>
+	relation 132866 *---
+	  a role_name "" multiplicity "1" public
+	    python "${comment}${self}${name} = ${type}()
+"
+	    classrelation_ref 137730 // <composition>
+	  b role_name "" multiplicity "*" public
+	    python "${comment}${self}${name} = ${stereotype}()
+"
+	    classrelation_ref 137858 // <composition>
+      end
+
+      classrelation 137986 // <aggregation>
+	relation 132994 o---
+	  a role_name "" multiplicity "*" public
+	    python "${comment}${self}${name} = ${stereotype}()
+"
+	    classrelation_ref 137986 // <aggregation>
+	  b role_name "" multiplicity "*" public
+	    python "${comment}${self}${name} = ${stereotype}()
+"
+	    classrelation_ref 138114 // <aggregation>
+      end
+    end
+  end
+
+  classview 135045 "PrivilegiosClassView"
+    //class diagram settings
+    draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+    //collaboration diagram settings
+    show_full_operations_definition default show_hierarchical_rank default write_horizontally default class_drawing_mode default drawing_language default package_name_in_tab default show_context default show_msg_context default draw_all_relations default shadow default show_stereotype_properties default
+    //object diagram settings
+     write_horizontally default package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default show_stereotype_properties default
+    //sequence diagram settings
+    show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+    //state diagram settings
+    package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations default shadow default
+    show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+    //class settings
+    //activity diagram settings
+    package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
+    show_infonote default drawing_language default show_stereotype_properties default
+    class 135429 "Privilegios"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl "class ${name}${inherit}:
+${docstring}${members}
+"
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 141445 // <dependency>
+	relation 141445 -_->
+	  a default
+	    python "${type}"
+	    classrelation_ref 141445 // <dependency>
+	  b parent class_ref 129285 // Mapper
+      end
+
+      attribute 143365 "idPrivilegio"
+	private explicit_type "long"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+      end
+
+      attribute 143493 "nomPrivilegio"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+      end
+
+      attribute 143621 "desPrivilegio"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+      end
+
+      classrelation 140674 // <composition>
+	relation_ref 134274 // <composition>
+      end
+    end
+  end
+
+  classview 135173 "RolPermisosClassView"
+    //class diagram settings
+    draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+    //collaboration diagram settings
+    show_full_operations_definition default show_hierarchical_rank default write_horizontally default class_drawing_mode default drawing_language default package_name_in_tab default show_context default show_msg_context default draw_all_relations default shadow default show_stereotype_properties default
+    //object diagram settings
+     write_horizontally default package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default show_stereotype_properties default
+    //sequence diagram settings
+    show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+    //state diagram settings
+    package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations default shadow default
+    show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+    //class settings
+    //activity diagram settings
+    package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
+    show_infonote default drawing_language default show_stereotype_properties default
+    class 135557 "RolPermisos"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl "class ${name}${inherit}:
+${docstring}${members}
+"
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 141829 // <dependency>
+	relation 141829 -_->
+	  a default
+	    python "${type}"
+	    classrelation_ref 141829 // <dependency>
+	  b parent class_ref 129285 // Mapper
+      end
+
+      attribute 144261 "idRol"
+	private type class_ref 130437 // Rol
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+      end
+
+      attribute 144389 "idPermiso"
+	private type class_ref 135941 // Pemisos
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+      end
+
+      classrelation 139010 // <aggregation>
+	relation 133506 o---
+	  a role_name "" public
+	    python "${comment}${self}${name} = ${value}
+"
+	    classrelation_ref 139010 // <aggregation>
+	  b role_name "" public
+	    python "${comment}${self}${name} = ${value}
+"
+	    classrelation_ref 139138 // <aggregation>
+      end
+
+      classrelation 139394 // <aggregation>
+	relation_ref 133634 // <aggregation>
+      end
+
+      classrelation 139650 // <aggregation>
+	relation_ref 133762 // <aggregation>
+      end
+    end
+  end
+
+  classview 135301 "UsuarioProyectoRolProyectoClassView"
+    //class diagram settings
+    draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+    //collaboration diagram settings
+    show_full_operations_definition default show_hierarchical_rank default write_horizontally default class_drawing_mode default drawing_language default package_name_in_tab default show_context default show_msg_context default draw_all_relations default shadow default show_stereotype_properties default
+    //object diagram settings
+     write_horizontally default package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default show_stereotype_properties default
+    //sequence diagram settings
+    show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+    //state diagram settings
+    package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations default shadow default
+    show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+    //class settings
+    //activity diagram settings
+    package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
+    show_infonote default drawing_language default show_stereotype_properties default
+    class 135685 "UsuarioProyectoRolProyecto"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl "class ${name}${inherit}:
+${docstring}${members}
+"
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 141573 // <dependency>
+	relation 141573 -_->
+	  a default
+	    python "${type}"
+	    classrelation_ref 141573 // <dependency>
+	  b parent class_ref 129285 // Mapper
+      end
+
+      attribute 142341 "idRol"
+	private type class_ref 130437 // Rol
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+      end
+
+      attribute 142469 "idUsuario"
+	private type class_ref 130309 // Usuario
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+      end
+
+      attribute 142597 "idProyecto"
+	private type class_ref 128773 // Proyecto
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+      end
+
+      classrelation 137346 // <composition>
+	relation_ref 132610 // <composition>
+      end
+
+      classrelation 137474 // <composition>
+	relation 132738 *---
+	  a role_name "" multiplicity "1" public
+	    python "${comment}${self}${name} = ${type}()
+"
+	    classrelation_ref 137474 // <composition>
+	  b role_name "" multiplicity "*" public
+	    python "${comment}${self}${name} = ${stereotype}()
+"
+	    classrelation_ref 137602 // <composition>
+      end
+
+      classrelation 138626 // <aggregation>
+	relation_ref 133250 // <aggregation>
+      end
+
+      classrelation 138754 // <aggregation>
+	relation 133378 o---
+	  a role_name "" multiplicity "*" public
+	    python "${comment}${self}${name} = ${stereotype}()
+"
+	    classrelation_ref 138754 // <aggregation>
+	  b role_name "" multiplicity "*" public
+	    python "${comment}${self}${name} = ${stereotype}()
+"
+	    classrelation_ref 138882 // <aggregation>
+      end
+    end
+  end
+
+  classview 135429 "PrivilegiosPermisosClassView"
+    //class diagram settings
+    draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+    //collaboration diagram settings
+    show_full_operations_definition default show_hierarchical_rank default write_horizontally default class_drawing_mode default drawing_language default package_name_in_tab default show_context default show_msg_context default draw_all_relations default shadow default show_stereotype_properties default
+    //object diagram settings
+     write_horizontally default package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default show_stereotype_properties default
+    //sequence diagram settings
+    show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+    //state diagram settings
+    package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations default shadow default
+    show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+    //class settings
+    //activity diagram settings
+    package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
+    show_infonote default drawing_language default show_stereotype_properties default
+    class 135813 "PrivilegiosPermisos"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl "class ${name}${inherit}:
+${docstring}${members}
+"
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 141957 // <dependency>
+	relation 141957 -_->
+	  a default
+	    python "${type}"
+	    classrelation_ref 141957 // <dependency>
+	  b parent class_ref 129285 // Mapper
+      end
+
+      attribute 143109 "idPrivilegio"
+	private type class_ref 135429 // Privilegios
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+      end
+
+      attribute 143237 "idPermiso"
+	private type class_ref 135941 // Pemisos
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+      end
+
+      classrelation 140162 // <composition>
+	relation_ref 134018 // <composition>
+      end
+
+      classrelation 140290 // <composition>
+	relation 134146 *---
+	  a role_name "" multiplicity "1" public
+	    python "${comment}${self}${name} = ${type}()
+"
+	    classrelation_ref 140290 // <composition>
+	  b role_name "" multiplicity "*" public
+	    python "${comment}${self}${name} = ${stereotype}()
+"
+	    classrelation_ref 140418 // <composition>
+      end
+
+      classrelation 140546 // <composition>
+	relation 134274 *---
+	  a role_name "" multiplicity "1" public
+	    python "${comment}${self}${name} = ${type}()
+"
+	    classrelation_ref 140546 // <composition>
+	  b role_name "" multiplicity "*" public
+	    python "${comment}${self}${name} = ${stereotype}()
+"
+	    classrelation_ref 140674 // <composition>
+      end
+    end
+  end
+
+  classview 135557 "PermisosClassView"
+    //class diagram settings
+    draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+    //collaboration diagram settings
+    show_full_operations_definition default show_hierarchical_rank default write_horizontally default class_drawing_mode default drawing_language default package_name_in_tab default show_context default show_msg_context default draw_all_relations default shadow default show_stereotype_properties default
+    //object diagram settings
+     write_horizontally default package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default show_stereotype_properties default
+    //sequence diagram settings
+    show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+    //state diagram settings
+    package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations default shadow default
+    show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+    //class settings
+    //activity diagram settings
+    package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
+    show_infonote default drawing_language default show_stereotype_properties default
+    class 135941 "Pemisos"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl "class ${name}${inherit}:
+${docstring}${members}
+"
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 142085 // <dependency>
+	relation 142085 -_->
+	  a default
+	    python "${type}"
+	    classrelation_ref 142085 // <dependency>
+	  b parent class_ref 129285 // Mapper
+      end
+
+      attribute 144517 "idPermiso"
+	private type class_ref 135941 // Pemisos
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+      end
+
+      attribute 144645 "idEntidadSistema"
+	private type class_ref 136069 // EntidadSistema
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+      end
+
+      classrelation 139522 // <aggregation>
+	relation 133762 o---
+	  a role_name "" multiplicity "*" public
+	    python "${comment}${self}${name} = ${stereotype}()
+"
+	    classrelation_ref 139522 // <aggregation>
+	  b role_name "" multiplicity "1" public
+	    python "${comment}${self}${name} = ${value}
+"
+	    classrelation_ref 139650 // <aggregation>
+      end
+
+      classrelation 139778 // <composition>
+	relation 133890 *---
+	  a role_name "" multiplicity "1..*" public
+	    python "${comment}${self}${name} = ${stereotype}()
+"
+	    classrelation_ref 139778 // <composition>
+	  b role_name "" multiplicity "1" public
+	    python "${comment}${self}${name} = ${type}()
+"
+	    classrelation_ref 139906 // <composition>
+      end
+
+      classrelation 140034 // <composition>
+	relation 134018 *---
+	  a role_name "" public
+	    python "${comment}${self}${name} = ${type}()
+"
+	    classrelation_ref 140034 // <composition>
+	  b role_name "" public
+	    python "${comment}${self}${name} = ${type}()
+"
+	    classrelation_ref 140162 // <composition>
+      end
+
+      classrelation 140418 // <composition>
+	relation_ref 134146 // <composition>
+      end
+    end
+  end
+
+  classview 135685 "EntidadSistemaClassView"
+    //class diagram settings
+    draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+    //collaboration diagram settings
+    show_full_operations_definition default show_hierarchical_rank default write_horizontally default class_drawing_mode default drawing_language default package_name_in_tab default show_context default show_msg_context default draw_all_relations default shadow default show_stereotype_properties default
+    //object diagram settings
+     write_horizontally default package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default show_stereotype_properties default
+    //sequence diagram settings
+    show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+    //state diagram settings
+    package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations default shadow default
+    show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+    //class settings
+    //activity diagram settings
+    package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
+    show_infonote default drawing_language default show_stereotype_properties default
+    class 136069 "EntidadSistema"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl "class ${name}${inherit}:
+${docstring}${members}
+"
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 142213 // <dependency>
+	relation 142213 -_->
+	  a default
+	    python "${type}"
+	    classrelation_ref 142213 // <dependency>
+	  b parent class_ref 129285 // Mapper
+      end
+
+      attribute 142725 "idEntidadSistema"
+	private explicit_type "long"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+      end
+
+      attribute 142853 "nomEntidadSistema"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+      end
+
+      attribute 142981 "desEntidadSistema"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+      end
+
+      classrelation 139906 // <composition>
+	relation_ref 133890 // <composition>
+      end
+    end
+  end
+end

@@ -1,0 +1,11 @@
+window_sizes 1366 706 320 960 512 82
+diagrams
+  active  usecasediagram_ref 128005 // Diagrama CU
+    832 438 100 4 797 0
+end
+show_stereotypes
+selected usecasediagram_ref 128005 // Diagrama CU
+open
+  usecaseview_ref 128133 // CU Prototipo Desarrollo
+end
+end
